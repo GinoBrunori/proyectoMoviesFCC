@@ -9,6 +9,8 @@ import java.util.Optional;
 
 @Repository
 public interface MovieRepository extends MongoRepository<Movie, ObjectId> {
+
+    // Spring Boot ya se da cuenta del metodo que creamos. 👇
     Optional<Movie> findMovieByImdbId(String imdbId);
 
 }
